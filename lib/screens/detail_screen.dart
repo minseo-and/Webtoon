@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:webtoon/services/api_service.dart';
 import 'package:webtoon/models/webtoon_detail_model.dart';
@@ -26,8 +27,6 @@ class _DetailScreenState extends State<DetailScreen> {
     episodes = ApiService.getLastestEpisodeId(widget.id);
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,10 +35,6 @@ class _DetailScreenState extends State<DetailScreen> {
         elevation: 2,
         backgroundColor: Colors.white,
         foregroundColor: Colors.green,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(
-              Icons.favorite_outline_outlined))
-        ],
         title: Text(
           widget.title,
           style: const TextStyle(
