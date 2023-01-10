@@ -3,7 +3,7 @@ import 'package:webtoon/api_service.dart';
 import 'package:webtoon/screens/home_screen.dart';
 
 void main() {
-  ApiService().getTodaysToons();
+  ApiService.getTodaysToons();
   runApp(const MyApp());
 }
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
